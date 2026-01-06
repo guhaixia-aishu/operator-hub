@@ -1,5 +1,7 @@
 # Operator Hub
 
+[English](README.md)
+
 Operator Hub 是一个开源的算子与工具管理平台，旨在连接大语言模型（LLMs）与实际业务能力。通过支持 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)，它提供了一套标准化的机制来注册、管理和执行各种算子（Operators）及工具（Tools），帮助开发者快速构建强大的 AI Agent 应用。
 
 ## 核心组件
