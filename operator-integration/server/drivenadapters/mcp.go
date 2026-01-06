@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 	"github.com/mark3labs/mcp-go/client"
 	"github.com/mark3labs/mcp-go/client/transport"
 	"github.com/mark3labs/mcp-go/mcp"

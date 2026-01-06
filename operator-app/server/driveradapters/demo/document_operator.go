@@ -4,11 +4,11 @@ import (
 	"net/http"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/drivenadapters"
-	myErr "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/rest"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/logics/demo"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/drivenadapters"
+	myErr "github.com/kweaver-ai/operator-hub/operator-app/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/rest"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/logics/demo"
 	"github.com/gin-gonic/gin"
 )
 

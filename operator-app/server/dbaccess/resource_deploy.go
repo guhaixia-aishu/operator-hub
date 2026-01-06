@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/db"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces/model"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/operator-go-lib/ormhelper"
-	"devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/proton-rds-sdk-go/sqlx"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/db"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/proton-rds-sdk-go/sqlx"
 )
 
 type resourceDeployDB struct {

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	logicsmcp "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/mcp"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	logicsmcp "github.com/kweaver-ai/operator-hub/operator-integration/server/logics/mcp"
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
 )

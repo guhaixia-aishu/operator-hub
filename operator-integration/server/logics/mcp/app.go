@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	infraerrors "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/utils"
+	infraerrors "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/utils"
 )
 
 func (s *mcpServiceImpl) GetAppConfig(ctx context.Context, mcpID string, mode interfaces.MCPMode) (*interfaces.MCPAppConfigInfo, error) {

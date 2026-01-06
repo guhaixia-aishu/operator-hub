@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/mocks"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/mocks"
 	. "github.com/smartystreets/goconvey/convey"
 	"go.uber.org/mock/gomock"
 )

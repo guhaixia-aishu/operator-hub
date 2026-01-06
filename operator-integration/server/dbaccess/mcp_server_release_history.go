@@ -5,12 +5,12 @@ import (
 	"database/sql"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/db"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
-	"devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/proton-rds-sdk-go/sqlx"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/db"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/proton-rds-sdk-go/sqlx"
 )
 
 type mcpServerReleaseHistoryDB struct {

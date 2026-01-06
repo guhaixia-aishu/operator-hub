@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	o11y "devops.aishu.cn/AISHUDevOps/DIP/_git/mdl-go-lib/observability"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	o11y "github.com/kweaver-ai/kweaver-go-lib/observability"
 )
 
 // CheckAddAsTool 检查算子是否允许添加为工具

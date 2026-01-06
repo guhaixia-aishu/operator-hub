@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/drivenadapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/rest"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/metadata"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/drivenadapters"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/rest"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/metadata"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 )

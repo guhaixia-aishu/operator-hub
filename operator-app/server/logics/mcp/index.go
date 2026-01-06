@@ -3,10 +3,10 @@ package mcp
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/dbaccess"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/dbaccess"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces/model"
 )
 
 type mcpInstanceServiceImpl struct {

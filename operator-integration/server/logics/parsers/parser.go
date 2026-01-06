@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/validator"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/validator"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 // Parser 解析器接口

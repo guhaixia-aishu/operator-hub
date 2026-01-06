@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
 )
 
 // 示例：如何在现有项目中使用ORM Helper

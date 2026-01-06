@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
 )
 
 // MCPConfigTest 测试用的配置结构体

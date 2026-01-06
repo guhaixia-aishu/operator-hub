@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/rest"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/utils"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/rest"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/utils"
 )
 
 type operatorIntegration struct {

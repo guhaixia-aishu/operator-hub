@@ -7,8 +7,8 @@ import (
 	"context"
 	"net/http"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 var statusTransitions = map[interfaces.BizStatus][]interfaces.BizStatus{

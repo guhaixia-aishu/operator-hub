@@ -12,12 +12,12 @@ import (
 	"strings"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/dbaccess"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/validator"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/dbaccess"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/validator"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 	validator10 "github.com/go-playground/validator/v10"
 )
 

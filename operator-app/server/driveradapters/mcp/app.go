@@ -3,9 +3,9 @@ package mcp
 import (
 	"net/http"
 
-	infraerrors "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/rest"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	infraerrors "github.com/kweaver-ai/operator-hub/operator-app/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/rest"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 )

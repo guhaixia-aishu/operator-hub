@@ -6,12 +6,12 @@ package operator
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/drivenadapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/validator"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	lcategory "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/category"
-	loperator "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/operator"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/drivenadapters"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/validator"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	lcategory "github.com/kweaver-ai/operator-hub/operator-integration/server/logics/category"
+	loperator "github.com/kweaver-ai/operator-hub/operator-integration/server/logics/operator"
 	"github.com/gin-gonic/gin"
 )
 

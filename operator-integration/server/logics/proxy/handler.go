@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 var (

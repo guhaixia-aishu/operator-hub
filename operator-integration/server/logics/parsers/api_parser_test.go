@@ -8,8 +8,8 @@ import (
 	"os"
 	"testing"
 
-	myErr "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/logger"
+	myErr "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/logger"
 	jsoniter "github.com/json-iterator/go"
 	. "github.com/smartystreets/goconvey/convey"
 )

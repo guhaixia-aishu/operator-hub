@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	"github.com/getkin/kin-openapi/openapi3"
 	jsoniter "github.com/json-iterator/go"
 )

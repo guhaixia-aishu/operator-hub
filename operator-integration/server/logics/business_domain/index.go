@@ -3,9 +3,9 @@ package business_domain
 import (
 	"context"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/drivenadapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/drivenadapters"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 type businessDomainServiceImpl struct {

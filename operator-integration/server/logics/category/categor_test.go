@@ -5,11 +5,11 @@ import (
 	"errors"
 	"testing"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/logger"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/mocks"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/logger"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/mocks"
 	. "github.com/smartystreets/goconvey/convey"
 	"go.uber.org/mock/gomock"
 )

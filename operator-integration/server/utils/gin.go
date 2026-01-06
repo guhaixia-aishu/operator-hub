@@ -5,7 +5,7 @@ import (
 	"mime/multipart"
 	"net/http"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 )

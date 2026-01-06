@@ -20,6 +20,7 @@ import (
 type MockHTTPRouterInterface struct {
 	ctrl     *gomock.Controller
 	recorder *MockHTTPRouterInterfaceMockRecorder
+	isgomock struct{}
 }
 
 // MockHTTPRouterInterfaceMockRecorder is the mock recorder for MockHTTPRouterInterface.

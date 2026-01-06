@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/utils"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/utils"
 )
 
 func TestPublicSmokeOperatorInfo(t *testing.T) {
@@ -67,7 +67,7 @@ type ExecuteToolReq struct {
 }
 
 func TestPublicSmokeExecuteTool(t *testing.T) {
-	local := "/root/go/src/devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/tests/file/auth.json"
+	local := "/root/go/src/github.com/kweaver-ai/operator-hub/operator-integration/server/tests/file/auth.json"
 	client := NewPublicSmokeClient("127.0.0.1:9000")
 	data, err := os.ReadFile(local)
 	if err != nil {

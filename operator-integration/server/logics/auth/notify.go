@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 // NotifyResourceChange 通知资源变更

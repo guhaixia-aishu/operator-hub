@@ -6,18 +6,18 @@ package mcp
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/dbaccess"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/drivenadapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/validator"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/auth"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/business_domain"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/category"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/intcomp"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/metric"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/toolbox"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/dbaccess"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/drivenadapters"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/validator"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/auth"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/business_domain"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/category"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/intcomp"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/metric"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/toolbox"
 )
 
 var (

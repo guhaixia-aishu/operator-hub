@@ -6,10 +6,10 @@ package db
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
 	// _ 注册proton-rds驱动
-	_ "devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/proton-rds-sdk-go/driver"
-	"devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/proton-rds-sdk-go/sqlx"
+	_ "github.com/kweaver-ai/proton-rds-sdk-go/driver"
+	"github.com/kweaver-ai/proton-rds-sdk-go/sqlx"
 )
 
 var (

@@ -1,9 +1,9 @@
 package driveradapters
 
 import (
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/drivenadapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/driveradapters/demo"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/drivenadapters"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/driveradapters/demo"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	"github.com/gin-gonic/gin"
 )
 

@@ -6,11 +6,11 @@ import (
 	"sort"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/drivenadapters/opensearch"
-	myErr "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/errors"
-	opensearch_infra "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/opensearch"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/utils"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/drivenadapters/opensearch"
+	myErr "github.com/kweaver-ai/operator-hub/operator-app/server/infra/errors"
+	opensearch_infra "github.com/kweaver-ai/operator-hub/operator-app/server/infra/opensearch"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/utils"
 	"github.com/olivere/elastic/v7"
 )
 

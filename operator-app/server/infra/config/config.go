@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/logger"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/utils"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/logger"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/utils"
 
 	"github.com/creasty/defaults"
 	"gopkg.in/yaml.v3"

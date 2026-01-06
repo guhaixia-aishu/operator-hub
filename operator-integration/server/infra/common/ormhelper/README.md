@@ -39,15 +39,15 @@
 ### 安装
 
 ```bash
-go get devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper
+go get github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper
 ```
 
 ### 基础使用
 
 ```go
 import (
-    "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
-    "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/logger"
+    "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
+    "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/logger"
 )
 
 // 1. 创建ORM实例
@@ -91,8 +91,8 @@ import (
     "log"
     "time"
 
-    "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
-    "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/logger"
+    "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
+    "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/logger"
 )
 
 // 定义数据模型

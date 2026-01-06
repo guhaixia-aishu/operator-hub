@@ -95,7 +95,7 @@ Content-Type: text/plain
 Content-Disposition: form-data; name="data"; filename="test.yaml"
 Content-Type: application/json
 
-< /root/go/src/devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/tests/file/yaml/test.yaml
+< /root/go/src/github.com/kweaver-ai/operator-hub/operator-integration/server/tests/file/yaml/test.yaml
 --WebAppBoundary--
 
 
@@ -120,7 +120,7 @@ true
 Content-Disposition: form-data; name="data"; filename="test.json"
 Content-Type: application/json
 
-< /root/go/src/devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/tests/file/json/test.json
+< /root/go/src/github.com/kweaver-ai/operator-hub/operator-integration/server/tests/file/json/test.json
 --WebAppBoundary--
 
 

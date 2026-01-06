@@ -4,7 +4,7 @@ package cache
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 // InMemoryCache is a simple in-memory cache implementation.

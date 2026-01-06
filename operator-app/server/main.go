@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/driveradapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/logics/mcp"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/driveradapters"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/logics/mcp"
 
 	"github.com/gin-gonic/gin"
 )

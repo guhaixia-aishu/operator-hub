@@ -14,7 +14,7 @@ import (
 	url "net/url"
 	reflect "reflect"
 
-	interfaces "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	interfaces "github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	gomock "go.uber.org/mock/gomock"
 )
 
@@ -22,6 +22,7 @@ import (
 type MockLogger struct {
 	ctrl     *gomock.Controller
 	recorder *MockLoggerMockRecorder
+	isgomock struct{}
 }
 
 // MockLoggerMockRecorder is the mock recorder for MockLogger.
@@ -205,6 +206,7 @@ func (mr *MockLoggerMockRecorder) WithContext(ctx any) *gomock.Call {
 type MockHTTPClient struct {
 	ctrl     *gomock.Controller
 	recorder *MockHTTPClientMockRecorder
+	isgomock struct{}
 }
 
 // MockHTTPClientMockRecorder is the mock recorder for MockHTTPClient.

@@ -1,7 +1,7 @@
 package validator
 
 import (
-	myErr "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
+	myErr "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
 )
 
 // TagToErrorType Validate tag 映射到错误分类

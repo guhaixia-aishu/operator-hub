@@ -3,7 +3,7 @@ package auth
 import (
 	"context"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 // CreateOwnerPolicy 创建owner权限

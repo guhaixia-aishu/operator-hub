@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	"github.com/gin-gonic/gin"
 )
 

@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
 	"github.com/mark3labs/mcp-go/mcp"
 )
 

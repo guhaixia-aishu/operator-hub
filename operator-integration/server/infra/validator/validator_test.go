@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common"
 	validatorv10 "github.com/go-playground/validator/v10"
 	. "github.com/smartystreets/goconvey/convey"
 )

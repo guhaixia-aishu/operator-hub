@@ -13,9 +13,9 @@ import (
 	"strings"
 	"testing"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/mocks"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/utils"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/mocks"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/utils"
 	"github.com/asaskevich/govalidator"
 	"github.com/gin-gonic/gin"
 	validatorv10 "github.com/go-playground/validator/v10"

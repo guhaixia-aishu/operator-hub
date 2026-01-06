@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 )
 
 func (s *mcpServiceImpl) getMCPToolConfig(ctx context.Context, mcpID string, mcpVersion int) (toolConfigs []*interfaces.MCPToolConfigInfo, err error) {

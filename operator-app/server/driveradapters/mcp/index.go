@@ -3,8 +3,8 @@ package mcp
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
-	logicmcp "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/logics/mcp"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
+	logicmcp "github.com/kweaver-ai/operator-hub/operator-app/server/logics/mcp"
 	"github.com/gin-gonic/gin"
 )
 

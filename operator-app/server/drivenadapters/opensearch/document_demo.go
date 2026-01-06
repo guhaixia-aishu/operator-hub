@@ -6,9 +6,9 @@ import (
 	"strings"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/opensearch"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/opensearch"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/olivere/elastic/v7"
 )

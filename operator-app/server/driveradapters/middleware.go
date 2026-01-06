@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/rest"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/rest"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 
-	"devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/TelemetrySDK-Go.git/span/v2/field"
+	"github.com/kweaver-ai/TelemetrySDK-Go/span/v2/field"
 	"github.com/gin-gonic/gin"
 	jsoniter "github.com/json-iterator/go"
 )

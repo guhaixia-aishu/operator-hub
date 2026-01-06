@@ -16,7 +16,7 @@ openapi
 Content-Disposition: form-data; name="data"; filename="tool.yaml"
 Content-Type: application/json
 
-< /root/go/src/devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/tests/file/yaml/markdown_tool.yaml
+< /root/go/src/github.com/kweaver-ai/operator-hub/operator-integration/server/tests/file/yaml/markdown_tool.yaml
 --WebAppBoundary--
 
 
@@ -117,7 +117,7 @@ openapi
 Content-Disposition: form-data; name="data"; filename="markdown_tool.yaml"
 Content-Type: application/json
 
-< /root/go/src/devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/tests/file/yaml/markdown_tool.yaml
+< /root/go/src/github.com/kweaver-ai/operator-hub/operator-integration/server/tests/file/yaml/markdown_tool.yaml
 --WebAppBoundary--
 
 ### 添加工具

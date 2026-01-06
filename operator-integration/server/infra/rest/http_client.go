@@ -10,9 +10,9 @@ import (
 	"net/url"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/logger"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/telemetry"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/logger"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/telemetry"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 	"github.com/bytedance/sonic"
 )
 

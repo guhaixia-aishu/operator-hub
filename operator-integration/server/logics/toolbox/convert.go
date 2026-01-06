@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/metric"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/utils"
-	o11y "devops.aishu.cn/AISHUDevOps/DIP/_git/mdl-go-lib/observability"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/metric"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/utils"
+	o11y "github.com/kweaver-ai/kweaver-go-lib/observability"
 )
 
 // ConvertOperatorToTool 算子转换成工具

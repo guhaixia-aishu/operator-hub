@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/localize"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/localize"
 	jsoniter "github.com/json-iterator/go"
 )
 

@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 )
 
 // Metadata 元数据通用接口

@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/config"
 	"github.com/olivere/elastic/v7"
 )
 

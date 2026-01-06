@@ -4,9 +4,9 @@ package category
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	lcategory "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/category"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	lcategory "github.com/kweaver-ai/operator-hub/operator-integration/server/logics/category"
 	"github.com/gin-gonic/gin"
 )
 

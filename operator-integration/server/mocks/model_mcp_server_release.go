@@ -14,8 +14,8 @@ import (
 	sql "database/sql"
 	reflect "reflect"
 
-	ormhelper "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
-	model "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
+	ormhelper "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
+	model "github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 	gomock "go.uber.org/mock/gomock"
 )
 

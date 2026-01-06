@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 )
 
 func checkIsDataSource(ctx context.Context, mode interfaces.ExecutionMode, isDataSourceReq *bool) (isDataSource bool, err error) {

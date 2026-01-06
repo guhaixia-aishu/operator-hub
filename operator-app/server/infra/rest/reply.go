@@ -7,9 +7,9 @@ import (
 	"errors"
 	"net/http"
 
-	myErr "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/logger"
-	validatorv "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/infra/validator"
+	myErr "github.com/kweaver-ai/operator-hub/operator-app/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/infra/logger"
+	validatorv "github.com/kweaver-ai/operator-hub/operator-app/server/infra/validator"
 	"github.com/bytedance/sonic"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

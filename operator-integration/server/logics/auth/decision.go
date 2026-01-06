@@ -5,9 +5,9 @@ import (
 	"context"
 	"net/http"
 
-	infraerrors "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/errors"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	o11y "devops.aishu.cn/AISHUDevOps/DIP/_git/mdl-go-lib/observability"
+	infraerrors "github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	o11y "github.com/kweaver-ai/kweaver-go-lib/observability"
 )
 
 const (

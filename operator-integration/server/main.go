@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/driveradapters"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/telemetry"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	logicscommon "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/common"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/driveradapters"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/telemetry"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	logicscommon "github.com/kweaver-ai/operator-hub/operator-integration/server/logics/common"
 	"github.com/gin-gonic/gin"
 )
 

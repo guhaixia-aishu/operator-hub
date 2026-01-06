@@ -7,13 +7,13 @@ import (
 	"database/sql"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/telemetry"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/telemetry"
 	"github.com/qustavo/sqlhooks/v2"
 
 	// _ 注册proton-rds驱动
-	protonRDS "devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/proton-rds-sdk-go/driver"
-	"devops.aishu.cn/AISHUDevOps/ONE-Architecture/_git/proton-rds-sdk-go/sqlx"
+	protonRDS "github.com/kweaver-ai/proton-rds-sdk-go/driver"
+	"github.com/kweaver-ai/proton-rds-sdk-go/sqlx"
 )
 
 const (

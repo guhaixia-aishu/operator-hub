@@ -8,7 +8,7 @@ import (
 	"context"
 	"database/sql"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
 )
 
 // OperatorRegisterDB 算子注册数据库

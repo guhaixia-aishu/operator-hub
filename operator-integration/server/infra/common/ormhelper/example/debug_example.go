@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/common/ormhelper"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/common/ormhelper"
 )
 
 // MCPServerConfigExample 示例结构体，模拟实际的MCPServerConfigDB

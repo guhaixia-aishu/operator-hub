@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/utils"
-	o11y "devops.aishu.cn/AISHUDevOps/DIP/_git/mdl-go-lib/observability"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/utils"
+	o11y "github.com/kweaver-ai/kweaver-go-lib/observability"
 )
 
 // QueryBuilder 查询构建器 - 提供更简洁的API来使用SelectListWithAuthBatch

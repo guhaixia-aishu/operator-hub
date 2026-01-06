@@ -6,10 +6,10 @@ package toolbox
 import (
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/config"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/infra/validator"
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-	ltoolbox "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/logics/toolbox"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/validator"
+	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+	ltoolbox "github.com/kweaver-ai/operator-hub/operator-integration/server/logics/toolbox"
 	"github.com/gin-gonic/gin"
 )
 

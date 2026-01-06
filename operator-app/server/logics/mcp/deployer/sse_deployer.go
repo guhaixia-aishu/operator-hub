@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	"github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	"github.com/mark3labs/mcp-go/server"
 )
 

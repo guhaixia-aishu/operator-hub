@@ -13,7 +13,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	interfaces "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-app/server/interfaces"
+	interfaces "github.com/kweaver-ai/operator-hub/operator-app/server/interfaces"
 	gomock "go.uber.org/mock/gomock"
 )
 
@@ -21,6 +21,7 @@ import (
 type MockHydra struct {
 	ctrl     *gomock.Controller
 	recorder *MockHydraMockRecorder
+	isgomock struct{}
 }
 
 // MockHydraMockRecorder is the mock recorder for MockHydra.
@@ -59,6 +60,7 @@ func (mr *MockHydraMockRecorder) Introspect(ctx, token any) *gomock.Call {
 type MockUserManagement struct {
 	ctrl     *gomock.Controller
 	recorder *MockUserManagementMockRecorder
+	isgomock struct{}
 }
 
 // MockUserManagementMockRecorder is the mock recorder for MockUserManagement.
@@ -91,4 +93,43 @@ func (m *MockUserManagement) GetUsersInfo(ctx context.Context, userIDs, fields [
 func (mr *MockUserManagementMockRecorder) GetUsersInfo(ctx, userIDs, fields any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsersInfo", reflect.TypeOf((*MockUserManagement)(nil).GetUsersInfo), ctx, userIDs, fields)
+}
+
+// MockAgentOperatorIntegration is a mock of AgentOperatorIntegration interface.
+type MockAgentOperatorIntegration struct {
+	ctrl     *gomock.Controller
+	recorder *MockAgentOperatorIntegrationMockRecorder
+	isgomock struct{}
+}
+
+// MockAgentOperatorIntegrationMockRecorder is the mock recorder for MockAgentOperatorIntegration.
+type MockAgentOperatorIntegrationMockRecorder struct {
+	mock *MockAgentOperatorIntegration
+}
+
+// NewMockAgentOperatorIntegration creates a new mock instance.
+func NewMockAgentOperatorIntegration(ctrl *gomock.Controller) *MockAgentOperatorIntegration {
+	mock := &MockAgentOperatorIntegration{ctrl: ctrl}
+	mock.recorder = &MockAgentOperatorIntegrationMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockAgentOperatorIntegration) EXPECT() *MockAgentOperatorIntegrationMockRecorder {
+	return m.recorder
+}
+
+// ExecuteTool mocks base method.
+func (m *MockAgentOperatorIntegration) ExecuteTool(ctx context.Context, mcpToolID string, req *interfaces.MCPExecuteToolRequest) (*interfaces.HTTPResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ExecuteTool", ctx, mcpToolID, req)
+	ret0, _ := ret[0].(*interfaces.HTTPResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ExecuteTool indicates an expected call of ExecuteTool.
+func (mr *MockAgentOperatorIntegrationMockRecorder) ExecuteTool(ctx, mcpToolID, req any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteTool", reflect.TypeOf((*MockAgentOperatorIntegration)(nil).ExecuteTool), ctx, mcpToolID, req)
 }

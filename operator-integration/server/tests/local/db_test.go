@@ -8,9 +8,9 @@ package local
 // 	"testing"
 // 	"time"
 
-// 	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/dbaccess"
-// 	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
-// 	"devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces/model"
+// 	"github.com/kweaver-ai/operator-hub/operator-integration/server/dbaccess"
+// 	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
+// 	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 // )
 
 // func TestCheckIsExistByName(t *testing.T) {

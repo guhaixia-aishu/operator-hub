@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	o11y "devops.aishu.cn/AISHUDevOps/DIP/_git/mdl-go-lib/observability"
+	o11y "github.com/kweaver-ai/kweaver-go-lib/observability"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/propagation"

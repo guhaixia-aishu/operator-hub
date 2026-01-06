@@ -14,7 +14,7 @@ import (
 	sql "database/sql"
 	reflect "reflect"
 
-	interfaces "devops.aishu.cn/AISHUDevOps/DIP/_git/agent-operator-integration/server/interfaces"
+	interfaces "github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
 	gomock "go.uber.org/mock/gomock"
 )
 
