@@ -50,8 +50,25 @@ export const getFormConfig = (originalSchema: any): FormConfig => {
       return;
     }
 
-    // 处理空对象：type = object 但没有 properties
-    if (schemaNode.type === 'object' && !schemaNode.properties) {
+    // 处理空对象：type = object 但没有任何有效的子结构
+    const validObjectFields = [
+      'properties',
+      'additionalProperties',
+      'oneOf',
+      'anyOf',
+      'allOf',
+      'enum',
+      'const',
+      'propertyNames',
+    ];
+    const nonPropertiesFields = validObjectFields.filter(field => field !== 'properties');
+    if (
+      schemaNode.type === 'object' &&
+      (validObjectFields.every(field => !(field in schemaNode)) ||
+        (nonPropertiesFields.every(field => !(field in schemaNode)) &&
+          schemaNode.properties &&
+          Object.keys(schemaNode.properties).length === 0))
+    ) {
       // 修改 schema
       schemaNode.type = 'string';
       schemaNode.format = 'json:object';
@@ -67,8 +84,13 @@ export const getFormConfig = (originalSchema: any): FormConfig => {
       return; // 修改后不需要继续遍历
     }
 
-    // 处理空数组：type = array 但没有 items
-    if (schemaNode.type === 'array' && !schemaNode.items) {
+    // 处理空数组：type = array 但items为空对象
+    const validItemFields = ['type', 'anyOf', 'oneOf', 'allOf', '$ref', 'const', 'enum'];
+    if (
+      schemaNode.type === 'array' &&
+      !Array.isArray(schemaNode.items) &&
+      validItemFields.every(field => !(field in schemaNode.items))
+    ) {
       // 修改 schema
       schemaNode.type = 'string';
       schemaNode.format = 'json:array';
