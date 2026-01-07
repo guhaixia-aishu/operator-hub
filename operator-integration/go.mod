@@ -1,6 +1,6 @@
 module github.com/kweaver-ai/operator-hub/operator-integration
 
-go 1.24.0
+go 1.24.11
 
 require (
 	github.com/agiledragon/gomonkey v2.0.2+incompatible
