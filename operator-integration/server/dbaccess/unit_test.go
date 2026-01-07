@@ -9,12 +9,12 @@ import (
 	"regexp"
 	"testing"
 
+	"github.com/DATA-DOG/go-sqlmock"
+	"github.com/agiledragon/gomonkey/v2"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/config"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/db"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 	"github.com/kweaver-ai/proton-rds-sdk-go/sqlx"
-	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/agiledragon/gomonkey"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
