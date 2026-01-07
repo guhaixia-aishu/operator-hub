@@ -151,11 +151,9 @@ func (s *mcpServiceImpl) batchImportMcpMetadata(ctx context.Context, tx *sql.Tx,
 		if err != nil {
 			return
 		}
-		if mcpTools != nil {
-			// 记录依赖工具
-			for _, tool := range mcpTools {
-				depToolBoxMap[tool.BoxID] = true
-			}
+		// 记录依赖工具
+		for _, tool := range mcpTools {
+			depToolBoxMap[tool.BoxID] = true
 		}
 	}
 	return

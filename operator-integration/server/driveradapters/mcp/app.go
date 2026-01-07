@@ -16,11 +16,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/errors"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/infra/rest"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces"
-	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator/v10"
 )
 
 const (
@@ -273,7 +273,7 @@ func (h *mcpHandle) reverseProxySSE(c *gin.Context, config *interfaces.MCPAppCon
 		h.Logger.Warnf("[MCP App] proxy error: %v", err)
 		w.WriteHeader(http.StatusBadGateway)
 		w.Header().Set("Content-Type", "text/plain")
-		w.Write([]byte(fmt.Sprintf("Proxy error: %v", err)))
+		_, _ = w.Write([]byte(fmt.Sprintf("Proxy error: %v", err)))
 	}
 
 	// 4. 响应修改
@@ -405,7 +405,7 @@ func (h *mcpHandle) reverseProxyStream(c *gin.Context, config *interfaces.MCPApp
 		h.Logger.Warnf("[MCP App] Proxy error: %v", err)
 		w.WriteHeader(http.StatusBadGateway)
 		w.Header().Set("Content-Type", "application/json")
-		w.Write([]byte(fmt.Sprintf(`{"error":"Proxy error: %v"}`, err)))
+		_, _ = w.Write([]byte(fmt.Sprintf(`{"error":"Proxy error: %v"}`, err)))
 	}
 
 	// 4. 添加响应修改功能
@@ -485,7 +485,7 @@ func (h *mcpHandle) processSSEStream(ctx context.Context, mcpID, token string, t
 			eventLine := line
 			// 读取下一行
 			if !scanner.Scan() {
-				dst.Write([]byte(eventLine + "\n"))
+				_, _ = dst.Write([]byte(eventLine + "\n"))
 				break
 			}
 
@@ -559,11 +559,11 @@ func (h *mcpHandle) processSSEStream(ctx context.Context, mcpID, token string, t
 				// 重写代理地址，确保不包含多余的查询参数分隔符
 				dataLine = fmt.Sprintf("data: /api/agent-operator-integration/v1/mcp/app/%s/message%s", mcpID, clientQuery)
 				// 写回修改后的数据
-				dst.Write([]byte(eventLine + "\n"))
-				dst.Write([]byte(dataLine + "\n"))
+				_, _ = dst.Write([]byte(eventLine + "\n"))
+				_, _ = dst.Write([]byte(dataLine + "\n"))
 			}
 		} else {
-			dst.Write([]byte(line + "\n"))
+			_, _ = dst.Write([]byte(line + "\n"))
 		}
 	}
 	if err := scanner.Err(); err != nil {
