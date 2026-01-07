@@ -14,7 +14,7 @@ import (
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/interfaces/model"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/logics/metric"
 	"github.com/kweaver-ai/operator-hub/operator-integration/server/mocks"
-	"github.com/agiledragon/gomonkey"
+	"github.com/agiledragon/gomonkey/v2"
 	. "github.com/smartystreets/goconvey/convey"
 	"go.uber.org/mock/gomock"
 )
