@@ -86,6 +86,9 @@ export const getFormConfig = (originalSchema: any): FormConfig => {
 
     // 处理空数组：type = array 但items为空对象
     const validItemFields = ['type', 'anyOf', 'oneOf', 'allOf', '$ref', 'const', 'enum'];
+    if (schemaNode.type === 'array' && !schemaNode.items) {
+      schemaNode.items = {};
+    }
     if (
       schemaNode.type === 'array' &&
       !Array.isArray(schemaNode.items) &&
