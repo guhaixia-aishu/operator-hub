@@ -106,11 +106,11 @@ func DecryptPEM(pemRaw, passwd []byte) (pemDer []byte, err error) {
 		return nil, fmt.Errorf("failed decoding PEM. Block must be different from nil. [% x]", pemRaw)
 	}
 
-	if !x509.IsEncryptedPEMBlock(block) {
+	if !x509.IsEncryptedPEMBlock(block) { //nolint:staticcheck
 		return nil, fmt.Errorf("failed decryptPEM PEM. it's not a decryped PEM [%s]", pemRaw)
 	}
 
-	der, err := x509.DecryptPEMBlock(block, passwd)
+	der, err := x509.DecryptPEMBlock(block, passwd) //nolint:staticcheck
 	if err != nil {
 		return nil, fmt.Errorf("failed PEM decryption [%s]", err)
 	}

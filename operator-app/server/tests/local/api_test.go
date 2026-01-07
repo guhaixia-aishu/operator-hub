@@ -113,7 +113,10 @@ func TestValidateAPI(t *testing.T) {
 
 // 测试API元数据解析
 func TestAPIMetadataAnalysis(t *testing.T) {
-	LoadOpenAPIMetadata(context.Background(), string(FileDataType), "./data/api_open-doc_v1_file-decrypt.json", nil)
+	_, err := LoadOpenAPIMetadata(context.Background(), string(FileDataType), "./data/api_open-doc_v1_file-decrypt.json", nil)
+	if err != nil {
+		t.Errorf("LoadOpenAPIMetadata failed: %v", err)
+	}
 }
 
 func TestXxx(t *testing.T) {
