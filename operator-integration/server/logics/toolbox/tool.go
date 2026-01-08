@@ -64,12 +64,13 @@ func (s *ToolServiceImpl) CreateTool(ctx context.Context, req *interfaces.Create
 	if err != nil {
 		return
 	}
-	tools, validatorMethodPathMap, validatorNameMap, err := s.parseOpenAPIToMetadata(ctx, req.BoxID, req.UserID, metadataList)
+	// 检查导入工具中是否存在重复的工具
+	tools, validatorNameMap, validatorMethodPathMap, err := s.parseOpenAPIToMetadata(ctx, req.BoxID, req.UserID, metadataList)
 	if err != nil {
 		return
 	}
 	// 去除掉重复的
-	failuresVailMap, err := s.checkToolConflict(ctx, req.BoxID, validatorMethodPathMap, validatorNameMap)
+	failuresVailMap, err := s.checkToolConflict(ctx, req.BoxID, validatorNameMap, validatorMethodPathMap)
 	if err != nil {
 		return
 	}
@@ -127,7 +128,7 @@ func (s *ToolServiceImpl) CreateTool(ctx context.Context, req *interfaces.Create
 }
 
 // 检查新增工具是否和已存在工具冲突
-func (s *ToolServiceImpl) checkToolConflict(ctx context.Context, boxID string, validatorMethodPathMap, validatorNameMap map[string]bool) (
+func (s *ToolServiceImpl) checkToolConflict(ctx context.Context, boxID string, validatorNameMap, validatorMethodPathMap map[string]bool) (
 	failuresVailMap map[string]error, err error) {
 	// 检查工具是否存在
 	toolList, err := s.ToolDB.SelectToolByBoxID(ctx, boxID)

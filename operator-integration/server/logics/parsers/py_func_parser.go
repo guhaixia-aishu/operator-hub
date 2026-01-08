@@ -220,6 +220,12 @@ func createRequestBody(inputs []interfaces.ParameterDef) *interfaces.RequestBody
 			if input.Example != nil {
 				propertySchema.Example = input.Example
 			}
+			// 如果是数组类型，设置items
+			if input.Type == "array" {
+				propertySchema.Items = openapi3.NewSchemaRef("", &openapi3.Schema{
+					Type: &openapi3.Types{openapi3.TypeString},
+				})
+			}
 			requestBodySchema.Properties[input.Name] = openapi3.NewSchemaRef("", propertySchema)
 			// 设置必填字段
 			if input.Required {
@@ -271,6 +277,12 @@ func createResponseBody(outputs []interfaces.ParameterDef) []*interfaces.Respons
 		// 设置示例值
 		if output.Example != nil {
 			propertySchema.Example = output.Example
+		}
+		// 如果是数组类型，设置items
+		if output.Type == "array" {
+			propertySchema.Items = openapi3.NewSchemaRef("", &openapi3.Schema{
+				Type: &openapi3.Types{openapi3.TypeString},
+			})
 		}
 		resultSchema.Properties[output.Name] = openapi3.NewSchemaRef("", propertySchema)
 		// 设置必填字段
