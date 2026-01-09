@@ -1,6 +1,23 @@
 # Operator Hub
 
-[English](README.md)
+中文 | [English](README.md)
+
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+
+Operator Hub 是 KWeaver 生态的一部分。如果您喜欢这个项目，欢迎也给 KWeaver 项目点个 ⭐！
+
+KWeaver 是一个构建、发布、运行决策智能型 AI 应用的开源生态。此生态采用本体作为业务知识网络的核心方法，以 DIP 为核心平台，旨在提供弹性、敏捷、可靠的企业级决策智能，进一步释放每一员的生产力。
+
+DIP 平台包括 ADP、Decision Agent、DIP Studio、AI Store 等关键子系统。
+
+## 📚 快速链接
+
+- 🤝 [贡献指南](CONTRIBUTING.zh.md) - 项目贡献指南
+- 📄 [许可证](LICENSE.txt) - Apache License 2.0
+- 🐛 [报告 Bug](https://github.com/kweaver-ai/operator-hub/issues) - 报告问题或 Bug
+- 💡 [功能建议](https://github.com/kweaver-ai/operator-hub/issues) - 提出新功能建议
+
+## Operator Hub 定义
 
 Operator Hub 是一个开源的算子与工具管理平台，旨在连接大语言模型（LLMs）与实际业务能力。通过支持 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)，它提供了一套标准化的机制来注册、管理和执行各种算子（Operators）及工具（Tools），帮助开发者快速构建强大的 AI Agent 应用。
 

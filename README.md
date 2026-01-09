@@ -1,6 +1,23 @@
 # Operator Hub
 
-[中文文档](README-zh.md)
+[中文](README-zh.md) | English
+
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+
+Operator Hub is part of the KWeaver ecosystem. If you like this project, please give the KWeaver project a ⭐!
+
+KWeaver is an open-source ecosystem for building, publishing, and running decision-intelligence AI applications. It uses ontology as the core method for business knowledge networks, with DIP as the core platform, aiming to provide flexible, agile, and reliable enterprise-level decision intelligence to further unleash the productivity of every member.
+
+The DIP platform includes key subsystems such as ADP, Decision Agent, DIP Studio, and AI Store.
+
+## 📚 Quick Links
+
+- 🤝 [Contributing Guide](CONTRIBUTING.md) - Guidelines for contributing to the project
+- 📄 [License](LICENSE) - Apache License 2.0
+- 🐛 [Report Bug](https://github.com/kweaver-ai/operator-hub/issues) - Report issues or bugs
+- 💡 [Feature Request](https://github.com/kweaver-ai/operator-hub/issues) - Propose new features
+
+## Operator Hub Definition
 
 Operator Hub is an open-source platform for managing and executing AI operators and tools, designed to bridge Large Language Models (LLMs) with real-world capabilities. By supporting the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), it provides a standardized mechanism to register, manage, and execute various operators and tools, empowering developers to build powerful AI Agent applications rapidly.
 
