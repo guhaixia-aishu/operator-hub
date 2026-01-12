@@ -97,7 +97,7 @@ depServices:
         timeout: 0
       version: ""
     host: opensearch-master.resource
-    password: eisoo.com123
+    password: yourpassword
     port: 9200
     protocol: http
     user: admin

@@ -1,7 +1,7 @@
 ### 创建dip-agent-operator-document-demo索引
 PUT http://192.168.124.91:9200/dip-agent-operator-document-demo
 Content-Type: application/json
-Authorization: Basic admin:eisoo.com123
+Authorization: Basic admin:yourpassword
 
 # 注意: base64_encoded_credentials 应替换为实际的 Base64 编码的 username:password
 # 例如: 如果用户名是 elastic，密码是 changeme，则应该用 Base64 编码 elastic:changeme
