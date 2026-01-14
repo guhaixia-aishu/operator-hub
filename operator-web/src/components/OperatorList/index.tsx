@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useState, useCallback, startTransition, useEffect, useMemo } from 'react';
 import { Button, Select, Space, Tabs, Empty, message } from 'antd';
 import { ReloadOutlined } from '@ant-design/icons';
@@ -29,7 +29,6 @@ import ImportMcpServiceModal from '@/components/MCP/ImportMcpServiceModal';
 import ImportToolboxAndOperatorModal from '@/components/OperatorList/ImportToolboxAndOperatorModal';
 
 const OperatorList: React.FC<{ isPluginMarket?: boolean }> = ({ isPluginMarket = false }) => {
-  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState<string>(searchParams.get('activeTab') || OperatorTypeEnum.MCP);
   const [publishStatus, setPublishStatus] = useState<string>('');
@@ -40,7 +39,7 @@ const OperatorList: React.FC<{ isPluginMarket?: boolean }> = ({ isPluginMarket =
   const [currentPage, setCurrentPage] = useState(1);
   const [operatorList, setOperatorList] = useState<any>([]);
   const pageSize = 20; // 每页数据量
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [categoryType, setCategoryType] = useState<any>([]);
   const [permConfigInfo, setPermConfigInfo] = useState<any>({});
   // 导入弹窗状态
@@ -77,6 +76,7 @@ const OperatorList: React.FC<{ isPluginMarket?: boolean }> = ({ isPluginMarket =
 
   // 处理标签页切换
   const handleTabChange = useCallback((key: string) => {
+    setLoading(true);
     startTransition(() => {
       setActiveTab(key);
       // 更新 URL 参数
@@ -278,7 +278,7 @@ const OperatorList: React.FC<{ isPluginMarket?: boolean }> = ({ isPluginMarket =
           <Button icon={<ReloadOutlined />} onClick={() => fetchInfo()} style={{ border: 'none' }} />
         </Space>
       </div>
-      {operatorList?.length ? (
+      {operatorList?.length || loading ? (
         <div style={{ height: !isPluginMarket ? 'calc(100vh - 195px)' : 'calc(100vh - 145px)' }}>
           <OperatorCard
             loading={loading}

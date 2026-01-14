@@ -1,23 +1,27 @@
 import { type FC, useState } from 'react';
-import { Button, Splitter, Empty, Spin, message } from 'antd';
+import { Button, Splitter, Empty, Spin, message, Tooltip } from 'antd';
 import { CloseOutlined, CopyOutlined } from '@ant-design/icons';
 import ReactJsonView from 'react-json-view';
 import copy from 'clipboard-copy';
 import PlayIcon from '@/assets/icons/play.svg';
+import AutoGenIcon from '@/assets/icons/auto-gen.svg';
 import { postFunctionExecute } from '@/apis/agent-operator-integration';
 import { useJsonValidator } from '@/hooks';
 import { JSONEditor } from '@/components/CodeEditor';
 import styles from './DebugPanel.module.less';
+import { generateParamValues } from './utils';
+import { type ParamItem } from './Metadata/types';
 
 interface TestCodeProps {
-  code: string;
+  inputs: ParamItem[]; // 输入参数数组
+  code: string; // 代码字符串
   onClose: () => void;
-  // 更新控制台输出结果
-  onUpdateStdoutLines: (stdout: string) => void;
+  onUpdateStdoutLines: (stdout: string) => void; // 更新控制台输出结果
+  validateInputs: () => boolean; // 校验输入参数的合法性
 }
 
-const DebugPanel: FC<TestCodeProps> = ({ code, onClose, onUpdateStdoutLines }) => {
-  const [input, setInput] = useState('{}');
+const DebugPanel: FC<TestCodeProps> = ({ inputs, code, onClose, onUpdateStdoutLines, validateInputs }) => {
+  const [input, setInput] = useState('{}'); // 输入框里的json字符串
   const [output, setResult] = useState<{ stderr: string; result: any }>({
     stderr: '',
     result: null,
@@ -63,21 +67,34 @@ const DebugPanel: FC<TestCodeProps> = ({ code, onClose, onUpdateStdoutLines }) =
     }
   };
 
+  // 自动生成输入
+  const autoGenInputs = () => {
+    if (validateInputs()) {
+      setInput(JSON.stringify(generateParamValues(inputs), null, 4));
+    }
+  };
+
   return (
     <div className="dip-h-100 dip-flex-column dip-overflow-hidden" style={{ backgroundColor: 'rgb(247, 247, 250)' }}>
       <div
         style={{ height: '56px', borderBottom: 'solid 1px rgb(229, 230, 235)' }}
         className="dip-flex-space-between dip-pl-20 dip-pr-20 dip-flex-shrink-0"
       >
-        <div className="dip-font-16 dip-c-bold">调试</div>
+        <div className="dip-font-16 dip-c-bold dip-user-select-none">调试</div>
         <CloseOutlined onClick={onClose} />
       </div>
 
       <Splitter layout="vertical" className="dip-flex-1">
         <Splitter.Panel min={48} style={{ overflow: 'hidden' }}>
           <div className="dip-pl-20 dip-pr-20 dip-h-100 dip-flex-column" style={{ minHeight: '172px' }}>
-            <div style={{ height: '48px', lineHeight: '48px' }} className="dip-c-bold">
+            <div
+              style={{ height: '48px', lineHeight: '48px' }}
+              className="dip-c-bold dip-flex-space-between dip-user-select-none"
+            >
               输入
+              {/* <Tooltip title="自动生成">
+                <AutoGenIcon className="dip-pointer" onClick={autoGenInputs} />
+              </Tooltip> */}
             </div>
             <JSONEditor
               height="calc(100% - 124px)"
@@ -105,7 +122,7 @@ const DebugPanel: FC<TestCodeProps> = ({ code, onClose, onUpdateStdoutLines }) =
 
         <Splitter.Panel min={48} style={{ overflow: 'hidden' }}>
           <div className="dip-pl-20 dip-pr-20 dip-h-100" style={{ minHeight: '172px' }}>
-            <div style={{ height: '48px', lineHeight: '48px' }} className="dip-c-bold">
+            <div style={{ height: '48px', lineHeight: '48px' }} className="dip-c-bold dip-user-select-none">
               输出
             </div>
 

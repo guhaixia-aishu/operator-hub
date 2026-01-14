@@ -15,12 +15,11 @@
         border-bottom: 2px solid #e8e8e8;
 
         &:first-child {
-          padding-left: 16px;
+          padding-left: 22px;
           border-radius: 8px 0 0 0;
         }
 
         &:last-child {
-          padding-right: 16px;
           border-radius: 0 8px 0 0;
         }
       }
@@ -51,6 +50,11 @@
 
   .name-field {
     width: 300px;
+    min-width: 250px;
+  }
+
+  .description-field {
+    width: 300px;
   }
 
   .type-field {
@@ -59,10 +63,7 @@
 
   .required-field {
     width: 60px;
-  }
-
-  .description-field {
-    width: 300px;
+    min-width: 60px;
   }
 
   .action-field {
@@ -81,5 +82,17 @@
 
   .add-row-icon {
     margin-right: 4px;
+  }
+
+  .collapsed-icon {
+    color: rgba(56, 55, 67, 0.6);
+  }
+
+  .action-icon {
+    color: rgb(136, 136, 146);
+  }
+
+  .name-description-input {
+    min-width: 250px;
   }
 }

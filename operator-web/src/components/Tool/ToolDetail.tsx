@@ -12,6 +12,7 @@ import {
   getToolBoxMarket,
   getToolList,
   toolStatus,
+  getToolDetail,
 } from '@/apis/agent-operator-integration';
 import { MetadataTypeEnum } from '@/apis/agent-operator-integration/type';
 import ToolEmptyIcon from '@/assets/icons/tool-empty.svg';
@@ -22,7 +23,6 @@ import MethodTag from '../OperatorList/MethodTag';
 import UploadTool from '../Tool/UploadTool';
 import { OperateTypeEnum, OperatorTypeEnum, PermConfigTypeEnum, ToolStatusEnum } from '../OperatorList/types';
 import EditToolModal from './EditToolModal';
-import { useMicroWidgetProps } from '@/hooks';
 import { confirmModal } from '@/utils/modal';
 import _ from 'lodash';
 import DetailHeader from '../OperatorList/DetailHeader';
@@ -41,7 +41,6 @@ enum LoadStatusEnum {
 
 export default function ToolDetail() {
   const navigate = useNavigate();
-  const microWidgetProps = useMicroWidgetProps();
   const [selectedTool, setSelectedTool] = useState<any>({});
   const [toolBoxInfo, setToolBoxInfo] = useState<any>({});
   const [searchParams] = useSearchParams();
@@ -109,7 +108,9 @@ export default function ToolDetail() {
         page_size: pageSize,
       });
       setToolList((prev: any) => (page === 1 ? response?.tools : [...prev, ...response?.tools]));
-      setSelectedTool(response?.tools[0]);
+      if (!selectedTool?.tool_id) {
+        setSelectedTool(response?.tools[0]);
+      }
       setHasMore(response?.tools.length >= pageSize);
       setSelectedToolIds([]);
       setSelectedToolArry([]);
@@ -155,7 +156,6 @@ export default function ToolDetail() {
         status: item?.status === ToolStatusEnum.Disabled ? ToolStatusEnum.Enabled : ToolStatusEnum.Disabled,
       }));
       await toolStatus(box_id, resultArray);
-      // getFetchTool();
 
       // 仅更新toolList中对应项的status
       setToolList(prev =>
@@ -172,6 +172,10 @@ export default function ToolDetail() {
             : item
         )
       );
+
+      if (selectedTool?.tool_id && resultArray.map(item => item.tool_id)?.includes(selectedTool?.tool_id)) {
+        setSelectedTool(prev => ({ ...prev, status: resultArray?.[0]?.status }));
+      }
 
       message.success(data[0]?.status === ToolStatusEnum.Disabled ? '此工具启用成功' : '此工具禁用成功');
     } catch (error: any) {
@@ -287,6 +291,28 @@ export default function ToolDetail() {
       navigate(`/ide/toolbox//${toolBoxInfo?.box_id}/tool/${toolId}/edit`);
     },
     [toolBoxInfo?.box_id, navigate]
+  );
+
+  // 编辑工具成功后的处理
+  const handleEditToolSuccess = useCallback(
+    async ({ box_id, tool_id }: { box_id: string; tool_id: string }) => {
+      try {
+        // 获取工具详情，然后更新list、选中项
+        const toolInfo = await getToolDetail(box_id, tool_id);
+        setToolList(prev => prev.map(item => (item.tool_id === tool_id ? toolInfo : item)));
+        if (selectedTool?.tool_id === tool_id) {
+          setSelectedTool(toolInfo);
+        }
+        if (selectedToolArry.find(tool => tool.tool_id === tool_id)) {
+          setSelectedToolArry(prev => prev.map(item => (item.tool_id === tool_id ? toolInfo : item)));
+        }
+      } catch (ex: any) {
+        if (ex?.description) {
+          message.error(ex.description);
+        }
+      }
+    },
+    [selectedTool, selectedToolArry]
   );
 
   return (
@@ -434,7 +460,7 @@ export default function ToolDetail() {
         <EditToolModal
           closeModal={() => setEditToolModal(false)}
           selectedTool={{ box_id, ...selectedToolArry[0] }}
-          fetchInfo={fetchToolList}
+          fetchInfo={handleEditToolSuccess}
         />
       )}
     </div>

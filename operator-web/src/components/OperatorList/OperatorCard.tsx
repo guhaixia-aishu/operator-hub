@@ -48,6 +48,8 @@ const OperatorCard: React.FC<{
     return { columns: 3, gutter: 16 };
   }, [isXXL, isXL]);
 
+  const loadingList = useMemo(() => Array(columns).fill({}), [columns]);
+
   // 响应式列数配置
   const getResponsiveProps = useCallback(() => {
     const span = 24 / columns;
@@ -103,7 +105,7 @@ const OperatorCard: React.FC<{
         >
           {/* 卡片网格 */}
           <Row gutter={[gutter, gutter]}>
-            {operatorList?.map((item: any) => (
+            {(operatorList?.length ? operatorList : loading ? loadingList : [])?.map((item: any) => (
               <Col key={item.id} {...getResponsiveProps()}>
                 <Card hoverable className="operator-list-content-card" loading={loading}>
                   <div>

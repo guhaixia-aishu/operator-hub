@@ -40,7 +40,7 @@ const IDEWorkspace = ({ action, operatorType }: IDEWorkspaceProps) => {
   const location = useLocation();
   const microWidgetProps = useMicroWidgetProps();
   const navigate = useNavigate();
-  const editingAreaRef = useRef<{ validate: () => Promise<boolean> }>(null);
+  const editingAreaRef = useRef<{ validate: () => Promise<boolean>; validateInputsOnly: () => boolean }>(null);
   const hasChangedRef = useRef<boolean>(false); // 是否已有改动
   const willGoBackRef = useRef<boolean>(false); // 是否会返回
 
@@ -305,6 +305,17 @@ const IDEWorkspace = ({ action, operatorType }: IDEWorkspaceProps) => {
     [detail, operatorId]
   );
 
+  // 校验输入参数的合法性
+  const validateInputs = useCallback(() => {
+    const valid = editingAreaRef.current?.validateInputsOnly?.();
+
+    if (!valid) {
+      message.info('请检查输入参数');
+    }
+
+    return valid;
+  }, []);
+
   // 保存
   const handleSave = useCallback(async () => {
     if (!detail.code?.trim()) {
@@ -468,6 +479,8 @@ const IDEWorkspace = ({ action, operatorType }: IDEWorkspaceProps) => {
                   onClose={() => setPanelVisible(prev => ({ ...prev, debugPanel: false }))}
                   code={detail.code || ''}
                   onUpdateStdoutLines={updateStdoutLines}
+                  validateInputs={validateInputs as () => boolean}
+                  inputs={detail?.inputs || []}
                 />
               </Splitter.Panel>
             )}

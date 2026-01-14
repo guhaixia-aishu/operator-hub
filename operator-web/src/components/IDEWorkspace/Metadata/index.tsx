@@ -29,6 +29,7 @@ const Metadata = forwardRef(({ operatorType, style, value, onChange }: MetadataP
   const inputParamFormRef = useRef<{ validate: () => boolean }>(null);
   const outputParamFormRef = useRef<{ validate: () => boolean }>(null);
 
+  // 校验所有元数据信息
   const validate = async () => {
     const validateBaseConfigResult = await baseConfigRef.current?.validate();
     const inputParamFormValidateResult = inputParamFormRef.current?.validate();
@@ -36,9 +37,14 @@ const Metadata = forwardRef(({ operatorType, style, value, onChange }: MetadataP
 
     return validateBaseConfigResult && inputParamFormValidateResult && outputParamFormValidateResult;
   };
+  // 仅校验输入参数
+  const validateInputsOnly = () => {
+    return inputParamFormRef.current?.validate();
+  };
 
   useImperativeHandle(ref, () => ({
     validate,
+    validateInputsOnly,
   }));
 
   // 处理输入输出参数的变化

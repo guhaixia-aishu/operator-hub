@@ -19,7 +19,7 @@ interface EditingAreaProps {
 }
 
 const EditingArea = forwardRef(({ operatorType, value, onChange }: EditingAreaProps, ref) => {
-  const metadataRef = useRef<{ validate: () => Promise<boolean> }>(null);
+  const metadataRef = useRef<{ validate: () => Promise<boolean>; validateInputsOnly: () => boolean }>(null);
 
   const validate = async () => {
     // 当元数据校验不通过，需要切换到元数据的tab
@@ -31,9 +31,18 @@ const EditingArea = forwardRef(({ operatorType, value, onChange }: EditingAreaPr
 
     return validateResult;
   };
+  // 仅校验输入参数
+  const validateInputsOnly = () => {
+    const isValid = metadataRef.current?.validateInputsOnly?.();
+    if (!isValid) {
+      setActiveTab(TabEnum.Metadata);
+    }
+    return isValid;
+  };
 
   useImperativeHandle(ref, () => ({
     validate,
+    validateInputsOnly,
   }));
 
   const [activeTab, setActiveTab] = useState<TabEnum>(TabEnum.Code);
