@@ -233,3 +233,14 @@ export const filterInvalidParams = (params: ParamItem[] | undefined): ParamItem[
     })
     .filter(Boolean) as ParamItem[];
 };
+
+// 给inputs/outpus增加id，用于前端界面的展示
+export const addParamId = (params: ParamItem[]): ParamItem[] => {
+  return params.map(param => {
+    return {
+      ...param,
+      id: param.id || generateRandomId(),
+      sub_parameters: param.sub_parameters ? addParamId(param.sub_parameters) : undefined,
+    };
+  });
+};
