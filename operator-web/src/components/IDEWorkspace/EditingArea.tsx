@@ -11,7 +11,7 @@ import { PythonEditor } from '@/components/CodeEditor';
 import { OperatorTypeEnum } from '@/components/OperatorList/types';
 import { useMicroWidgetProps } from '@/hooks';
 import Metadata from './Metadata';
-import { filterInvalidParams } from './utils';
+import { filterInvalidParams, addParamId } from './utils';
 import { type ToolDetail } from './types';
 
 enum TabEnum {
@@ -114,7 +114,7 @@ const EditingArea = forwardRef(({ operatorType, value, onChange }: EditingAreaPr
         hasError = true;
         hideAILoadingMessageRef.current?.();
         setAICodeGenerating(false);
-        message.error('生成失败：' + (error?.description || error?.cause?.description || '未知错误'));
+        message.error(error?.description || error?.cause?.description || '未知错误');
       },
       onClose: () => {
         // 设置AI生成代码状态为false
@@ -159,17 +159,18 @@ const EditingArea = forwardRef(({ operatorType, value, onChange }: EditingAreaPr
         inputs: filterInvalidParams(value.inputs),
         outputs: filterInvalidParams(value.outputs),
       });
+
       onChange({
         name,
         description,
         use_rule,
-        inputs,
-        outputs,
+        inputs: addParamId(inputs),
+        outputs: addParamId(outputs),
       });
-      message.success('AI 生成成功')
+      message.success('AI 生成成功');
     } catch (error: any) {
       if (error?.description) {
-        message.error('生成失败：' + error?.description);
+        message.error(error?.description);
       }
     } finally {
       hideAILoadingMessageRef.current?.();
